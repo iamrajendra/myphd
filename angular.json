@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "myphd"
+    }
+  },
+  "defaultProject": "myphd",
+  "cli": {
+    "analytics": "a701ee97-83c5-46e3-a8eb-6f0f9a60aa2d"
+  }
 }
