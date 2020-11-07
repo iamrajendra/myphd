@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfig:{
+    apiKey: "AIzaSyCMQIN4mmlU-avsD6v86Z-tw3yFiXBff3Q",
+    authDomain: "angualr-4fb8a.firebaseapp.com",
+    databaseURL: "https://angualr-4fb8a.firebaseio.com",
+    projectId: "angualr-4fb8a",
+    storageBucket: "angualr-4fb8a.appspot.com",
+    messagingSenderId: "815028180232",
+    appId: "1:815028180232:web:fbdb3dacbdfab803cac8bd",
+    measurementId: "G-BL9YB3P1KT"
+  }
 };
 
 /*
@@ -14,13 +24,3 @@ export const environment = {
  * on performance if an error is thrown.
  */
 // import 'zone.js/dist/zone-error';  // Included with Angular CLI.
-export const firebaseConfig = {
-  apiKey: "AIzaSyCMQIN4mmlU-avsD6v86Z-tw3yFiXBff3Q",
-  authDomain: "angualr-4fb8a.firebaseapp.com",
-  databaseURL: "https://angualr-4fb8a.firebaseio.com",
-  projectId: "angualr-4fb8a",
-  storageBucket: "angualr-4fb8a.appspot.com",
-  messagingSenderId: "815028180232",
-  appId: "1:815028180232:web:fbdb3dacbdfab803cac8bd",
-  measurementId: "G-BL9YB3P1KT"
-};

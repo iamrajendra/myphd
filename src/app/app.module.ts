@@ -15,6 +15,10 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { MessagesComponent } from './messages/messages.component';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { environment } from '../environments/environment';
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -28,6 +32,9 @@ import { MessagesComponent } from './messages/messages.component';
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     )
+,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+        AngularFireDatabaseModule
   ],
   declarations: [
     AppComponent,
