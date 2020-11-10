@@ -34,11 +34,13 @@ export class HeroesComponent implements OnInit {
 
 }
 add(name: string): void {
-  this.heroService.addHerero({name}as Hero)
+  this.heroService.addHero({name}as Hero)
 
 }
 
-
+delete(heroId: string): void {
+  this.heroService.deleteHero(heroId);
+}
 }  
     
   
