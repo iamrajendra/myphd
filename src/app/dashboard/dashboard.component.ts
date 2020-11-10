@@ -10,14 +10,25 @@ import { HeroService } from '../hero.service';
 export class DashboardComponent implements OnInit {
   heroes: Hero[] = [];
 
-  constructor(private heroService: HeroService) { }
+  constructor(private heroService: HeroService) {  }
 
   ngOnInit() {
-    // this.getHeroes();
+     this.getHeroes();
   }
 
-  // getHeroes(): void {
-  //   this.heroService.getHeroes()
-  //     .subscribe(heroes => this.heroes = heroes.slice(1, 5));
-  // }
+  getHeroes(): void {
+    this.heroService.getHeroes().subscribe(data => {
+      this.heroes = data.slice(0,4).map(e => {
+        return {
+          id: e.payload.doc.id,
+          ...(e.payload.doc.data()) as Hero
+        } as Hero;
+
+    }
+    
+    );
+  });
+          console.log("Length :: "+this.heroes.length)  
+
+}
 }
