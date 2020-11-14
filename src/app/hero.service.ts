@@ -25,6 +25,12 @@ export class HeroService {
     return this.firestore.collection('myphd').add(hero);
 }
 
+getHeroById(id: string){
+  return this.firestore.collection('myphd').doc(id);
+  
+
+}
+
 deleteHero(id: string){
   console.log("Service ID OF DELETE ELEMENT"+id);
   this.firestore.doc('myphd/' + id).delete();
