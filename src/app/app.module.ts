@@ -18,6 +18,11 @@ import { MessagesComponent } from './messages/messages.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
+import {DemoMaterialModule} from './material-modules';
+import { LoginComponent } from './login/login.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { RegistrationComponent } from './registration/registration.component';
+
 
 @NgModule({
   imports: [
@@ -25,6 +30,7 @@ import { environment } from '../environments/environment';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    FlexLayoutModule,
 
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
@@ -34,7 +40,8 @@ import { environment } from '../environments/environment';
     )
 ,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-        AngularFireDatabaseModule
+        AngularFireDatabaseModule,
+        DemoMaterialModule
   ],
   declarations: [
     AppComponent,
@@ -42,8 +49,9 @@ import { environment } from '../environments/environment';
     HeroesComponent,
     HeroDetailComponent,
     MessagesComponent,
-    HeroSearchComponent
-  ],
+    HeroSearchComponent,
+    LoginComponent,
+    RegistrationComponent  ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

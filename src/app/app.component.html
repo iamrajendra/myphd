@@ -1,7 +1,11 @@
-<h1>{{title}}</h1>
-<nav>
-  <a routerLink="/dashboard">Dashboard</a>
-  <a routerLink="/heroes">Heroes</a>
-</nav>
+<!-- Toolbar -->
+<mat-toolbar color="primary" class="app-header">
+  <div><a href="myphd.in" target="_blank" class="positronx">{{title}}</a></div>
+  <span class="nav-tool-items">
+    <a mat-button routerLink="login" routerLinkActive="active">Log in</a>
+    <a mat-button mat-raised-button routerLink="registration" routerLinkActive="active">Register</a>
+  </span>
+</mat-toolbar>
+
 <router-outlet></router-outlet>
 <!--<app-messages></app-messages>-->
