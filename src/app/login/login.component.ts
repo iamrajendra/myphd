@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthServiceService } from '../auth-service.service';
 import {FormBuilder ,FormGroup, FormControl,Validators } from '@angular/forms';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import Utils from '../utlis'
 
 
 
@@ -28,7 +29,8 @@ export class LoginComponent implements OnInit {
   onSubmit():void{
     console.log(" Form is valid "+this.loginForm.valid);
     if(!this.loginForm.valid){
-   this. openSnackBar("please enter username or password","Alert");
+   Utils.alert("please enter username or password",this._snackBar);
+
       return;
     }
 
@@ -38,9 +40,4 @@ export class LoginComponent implements OnInit {
 
 
 
-openSnackBar(message: string, action: string) {
-  this._snackBar.open(message, action, {
-    duration: 2000,
-  });
-}
 }
